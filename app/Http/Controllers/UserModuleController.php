@@ -14,6 +14,10 @@ class UserModuleController extends Controller
         return "Mostrando informacion del usuario: {$id}";
     }
 
+    public function UserEditInfo(){
+        return "Editar ifnormaciond de un usuario";
+    }
+
     public function UserNew(){
         return 'Crear usuario nuevo';
     }

@@ -21,4 +21,6 @@ Route :: get ('/user/{id}','UserModuleController@UserDetail')-> where('id','[0-9
 
 Route :: get ('/user/new','UserModuleController@UserNew');
 
+Route :: get('user/edit','UserModuleController@UserEditInfo');
+
 Route::get('/saludo/{name}/{nickname?}', 'UserModuleController@UserWelcome');

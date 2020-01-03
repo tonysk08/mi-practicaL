@@ -10,7 +10,7 @@ class UserModuleTest extends TestCase
 {
     /** @test */
     function Load_users_List_Test(){
-        $this->get('/user')
+        $this->get('/users')
             ->assertStatus(200)
             ->assertSee('Users');
     }
@@ -24,13 +24,15 @@ class UserModuleTest extends TestCase
 
     /** @test */
     function Edit_user_info_test(){
-        $this->get('/user/1/edit')
+        $this->get('user/edit')
             ->assertStatus(200)
-            ->assertSee("Editando informacion del usuario Nº 1");
+            ->assertSee("Editar ifnormaciond de un usuario");
     }
+  
 
     /** @test */
     function Load_new_User_Test(){
+        $this->withoutExceptionHandling();
         $this->get('/user/new')
             ->assertStatus(200)
             ->assertSee('Crear usuario nuevo');

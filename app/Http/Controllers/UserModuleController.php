@@ -7,7 +7,17 @@ use Illuminate\Http\Request;
 class UserModuleController extends Controller
 {
     public function UserList(){
-        return 'Users';
+        $UsersList = [
+            'Joel',
+            'Marcos',
+            'Miguel',
+            'Tomas',
+            'Angel',
+            'Erick',
+            'Jose',
+            'Maykol'
+        ];
+        return view('users',['UsersList'=> $UsersList]);
     }
 
     public function UserDetail($id){
@@ -20,14 +30,5 @@ class UserModuleController extends Controller
 
     public function UserNew(){
         return 'Crear usuario nuevo';
-    }
-    
-    public function UserWelcome($name,$nickname=null){
-        if($nickname){
-            return "bienvenido {$name}, tu apodo es {$nickname}";
-        }
-        else{
-            return "Bienvenido {$name}";
-        }
     }
 }

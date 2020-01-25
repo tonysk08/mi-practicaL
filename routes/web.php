@@ -23,4 +23,4 @@ Route :: get ('/user/new','UserModuleController@UserNew');
 
 Route :: get('user/edit','UserModuleController@UserEditInfo');
 
-Route::get('/saludo/{name}/{nickname?}', 'UserModuleController@UserWelcome');
+Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController@Index');

@@ -7,11 +7,11 @@
     <title>Listado de usarios</title>
 </head>
 <body>
-    <h1>Lista de Usarios</h1>
+    <h1><?= e($title);?></h1>
     
     <ul>
         <?php foreach($UsersList as $users):?>
-        <li><?php echo $users; ?></li>
+        <li><?= $users; ?></li>
         <?php endforeach;?>
     </ul>
 </body>

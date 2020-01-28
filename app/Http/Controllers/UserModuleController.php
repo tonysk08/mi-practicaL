@@ -17,7 +17,7 @@ class UserModuleController extends Controller
             'Jose',
             'Maykol'
         ];
-        return view('users',['UsersList'=> $UsersList]);
+        return view('users',['UsersList'=> $UsersList, 'title' => 'Listado']);
     }
 
     public function UserDetail($id){

@@ -24,3 +24,7 @@ Route :: get ('/user/new','UserModuleController@UserNew');
 Route :: get('user/edit','UserModuleController@UserEditInfo');
 
 Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController@Index');
+ 
+Route::get('/admi',function(){
+    return('Pantalla del administrador');
+});

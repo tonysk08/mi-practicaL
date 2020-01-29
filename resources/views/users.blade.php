@@ -10,9 +10,9 @@
     <h1><?= e($title);?></h1>
     
     <ul>
-        <?php foreach($UsersList as $users):?>
-        <li><?= $users; ?></li>
-        <?php endforeach;?>
+        @foreach($UsersList as $users)
+            <li>{{$users}}</li>
+        @endforeach
     </ul>
 </body>
 </html>

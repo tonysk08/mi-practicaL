@@ -15,7 +15,8 @@ class UserModuleController extends Controller
             'Angel',
             'Erick',
             'Jose',
-            'Maykol'
+            'Maykol',
+            '<script>alert("clicker")</script>'
         ];
         return view('users',['UsersList'=> $UsersList, 'title' => 'Listado']);
     }

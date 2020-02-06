@@ -15,14 +15,13 @@ class UserModuleController extends Controller
             'Angel',
             'Erick',
             'Jose',
-            'Maykol',
-            '<script>alert("clicker")</script>'
+            'Maykol'
         ];
         return view('users',['UsersList'=> $UsersList, 'title' => 'Listado']);
     }
 
     public function UserDetail($id){
-        return "Mostrando informacion del usuario: {$id}";
+        return view('UserDetail',compact('id'),['title' => 'Listado']);
     }
 
     public function UserEditInfo(){

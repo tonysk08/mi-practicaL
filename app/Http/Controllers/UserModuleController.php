@@ -17,18 +17,22 @@ class UserModuleController extends Controller
             'Jose',
             'Maykol'
         ];
-        return view('users',['UsersList'=> $UsersList, 'title' => 'Listado']);
+        $title = 'Listado De Usuarios';
+        return view('users.index',['UsersList'=> $UsersList, 'title' => $title]);
     }
 
     public function UserDetail($id){
-        return view('UserDetail',compact('id'),['title' => 'Listado']);
+        $title='Detalles del usuario';
+        return view('users.detail',compact('id'),['title' => $title]);
     }
 
     public function UserEditInfo(){
-        return "Editar ifnormaciond de un usuario";
+        $title='Edit Info User';
+        return view('users.edit',['title' => $title]);
     }
 
     public function UserNew(){
-        return 'Crear usuario nuevo';
+        $title='New User';
+        return view('users.new',['title' => $title]);
     }
 }

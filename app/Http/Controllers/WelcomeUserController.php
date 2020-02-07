@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 class WelcomeUserController extends Controller
 {
     public function Index($name,$nickname=null){
+        $title='Saludo';
         if($nickname){
-            return "bienvenido {$name}, tu apodo es {$nickname}";
+            return view('users.saludo',['texto'=>"Bienvenido {$name}, tu apodo es {$nickname}", 'title' => $title]);
         }
         else{
-            return "Bienvenido {$name}";
+            return view('users.saludo',['texto'=>"Bienvenido {$name}",'title' => $title]);
         }
     }
 }
